@@ -1,0 +1,223 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://soldier.png" type="Texture" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "新規アニメーション"
+tracks/0/type = "value"
+tracks/0/path = NodePath("hip/head/helmet/Position2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("hip/leg_u_r/leg_r/foot_r:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+
+[node name="Soldier" type="Node2D"]
+position = Vector2( 227, 147 )
+__meta__ = {
+"_edit_ik_": true
+}
+
+[node name="hip" type="Polygon2D" parent="."]
+position = Vector2( 0, -2 )
+rotation = -0.00657335
+offset = Vector2( -32, -34 )
+texture = ExtResource( 1 )
+polygon = PoolVector2Array( 28, 30, 36, 30, 36, 42, 28, 42 )
+uv = PoolVector2Array( 28, 30, 36, 30, 36, 42, 28, 42 )
+__meta__ = {
+"_edit_bone_": true,
+"_edit_ik_": true
+}
+
+[node name="head" type="Polygon2D" parent="hip"]
+position = Vector2( 0.0920213, -13.9997 )
+rotation = -0.0230949
+scale = Vector2( 1, 1 )
+offset = Vector2( -287.963, -15.232 )
+texture = ExtResource( 1 )
+polygon = PoolVector2Array( 284, 5, 293, 5, 293, 16, 284, 16 )
+uv = PoolVector2Array( 284, 5, 293, 5, 293, 16, 284, 16 )
+__meta__ = {
+"_edit_bone_": true,
+"_edit_ik_": true
+}
+
+[node name="helmet" type="Polygon2D" parent="hip/head"]
+position = Vector2( 0.177292, -5.96919 )
+rotation = -0.0347765
+offset = Vector2( -351.749, -9.15557 )
+texture = ExtResource( 1 )
+polygon = PoolVector2Array( 345, 10, 359, 10, 359, 2, 345, 2 )
+uv = PoolVector2Array( 345, 10, 359, 10, 359, 2, 345, 2 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Position2D" type="Position2D" parent="hip/head/helmet"]
+position = Vector2( 0.222885, -3.4563 )
+rotation = -0.183913
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="leg_u_r" type="Polygon2D" parent="hip"]
+position = Vector2( -0.0328732, 4.99989 )
+rotation = 6.4027
+scale = Vector2( 1, 1 )
+offset = Vector2( -224.012, -38.6739 )
+texture = ExtResource( 1 )
+polygon = PoolVector2Array( 220, 35, 228, 35, 228, 48, 220, 48 )
+uv = PoolVector2Array( 220, 35, 228, 35, 228, 48, 220, 48 )
+__meta__ = {
+"_edit_bone_": true,
+"_edit_ik_": true
+}
+
+[node name="leg_r" type="Polygon2D" parent="hip/leg_u_r"]
+position = Vector2( 0.799631, 7.02571 )
+rotation = -0.123803
+scale = Vector2( 1, 1 )
+offset = Vector2( -160.465, -48.0458 )
+texture = ExtResource( 1 )
+polygon = PoolVector2Array( 158, 46, 165, 46, 165, 63, 158, 63 )
+uv = PoolVector2Array( 158, 46, 165, 46, 165, 63, 158, 63 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="foot_r" type="Position2D" parent="hip/leg_u_r/leg_r"]
+position = Vector2( -0.153522, 13.8916 )
+rotation = 0.443335
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="leg_u_l" type="Polygon2D" parent="hip"]
+position = Vector2( -0.0328722, 4.99989 )
+rotation = -6.28317
+scale = Vector2( 1, 1 )
+offset = Vector2( -224.012, -38.6739 )
+texture = ExtResource( 1 )
+polygon = PoolVector2Array( 220, 35, 228, 35, 228, 48, 220, 48 )
+uv = PoolVector2Array( 220, 35, 228, 35, 228, 48, 220, 48 )
+__meta__ = {
+"_edit_bone_": true,
+"_edit_ik_": true
+}
+
+[node name="leg_l" type="Polygon2D" parent="hip/leg_u_l"]
+position = Vector2( -0.0650749, 9.89928 )
+rotation = 6.28315
+scale = Vector2( 1, 1 )
+offset = Vector2( -160.465, -48.0458 )
+texture = ExtResource( 1 )
+polygon = PoolVector2Array( 158, 46, 165, 46, 165, 63, 158, 63 )
+uv = PoolVector2Array( 158, 46, 165, 46, 165, 63, 158, 63 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="foot_l" type="Position2D" parent="hip/leg_u_l/leg_l"]
+position = Vector2( -0.0920467, 13.9997 )
+rotation = -0.93249
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="body" type="Polygon2D" parent="hip"]
+position = Vector2( 1.21072e-07, -6 )
+rotation = -0.00657466
+scale = Vector2( 1, 1 )
+z_index = -1
+offset = Vector2( -96, -24 )
+texture = ExtResource( 1 )
+polygon = PoolVector2Array( 91, 16, 101, 16, 101, 32, 91, 32 )
+uv = PoolVector2Array( 91, 16, 101, 16, 101, 32, 91, 32 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="arm_l_u" type="Polygon2D" parent="hip/body"]
+position = Vector2( -0.0787911, -4.78028 )
+rotation = 62.8442
+z_index = -1
+offset = Vector2( -415.924, -18.2197 )
+texture = ExtResource( 1 )
+polygon = PoolVector2Array( 414, 17, 418, 17, 418, 31, 414, 31 )
+uv = PoolVector2Array( 414, 17, 418, 17, 418, 31, 414, 31 )
+__meta__ = {
+"_edit_bone_": true,
+"_edit_ik_": true
+}
+
+[node name="arm_l" type="Polygon2D" parent="hip/body/arm_l_u"]
+position = Vector2( 0.0674035, 11.7803 )
+rotation = 18.8166
+z_index = -1
+offset = Vector2( -480, -29 )
+texture = ExtResource( 1 )
+polygon = PoolVector2Array( 478, 40, 478, 27, 482, 27, 482, 40 )
+uv = PoolVector2Array( 478, 40, 478, 27, 482, 27, 482, 40 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="hand_l" type="Position2D" parent="hip/body/arm_l_u/arm_l"]
+position = Vector2( -0.258546, 9.5077 )
+rotation = -1.05101
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="arm_r_u" type="Polygon2D" parent="hip/body"]
+position = Vector2( -0.0787911, -4.78028 )
+rotation = -6.27766
+z_index = 1
+offset = Vector2( -415.924, -18.2197 )
+texture = ExtResource( 1 )
+polygon = PoolVector2Array( 414, 17, 418, 17, 418, 31, 414, 31 )
+uv = PoolVector2Array( 414, 17, 418, 17, 418, 31, 414, 31 )
+__meta__ = {
+"_edit_bone_": true,
+"_edit_ik_": true
+}
+
+[node name="arm_r" type="Polygon2D" parent="hip/body/arm_r_u"]
+position = Vector2( -0.00715923, 11.6798 )
+rotation = 6.2772
+z_index = 1
+offset = Vector2( -480, -29 )
+texture = ExtResource( 1 )
+polygon = PoolVector2Array( 478, 40, 478, 27, 482, 27, 482, 40 )
+uv = PoolVector2Array( 478, 40, 478, 27, 482, 27, 482, 40 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Position2D" type="Position2D" parent="hip/body/arm_r_u/arm_r"]
+position = Vector2( -0.0657234, 9.99978 )
+rotation = -7.88742
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+"anims/新規アニメーション" = SubResource( 1 )

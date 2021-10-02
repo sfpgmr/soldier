@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://soldier_slice.png" type="Texture" id=1]
+[ext_resource path="res://Sprite.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 1.10069, 0 )
+
+[node name="Sprite" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 149.899, 124 )
+texture = ExtResource( 1 )
+vframes = 24
+script = ExtResource( 2 )
+show_sprites = true
+
+[node name="test" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "23"
+__meta__ = {
+"_edit_use_anchors_": false
+}
